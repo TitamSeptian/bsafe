@@ -12,5 +12,10 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('pages.dashboard');
 });
+
+Route::post('p/login', function ()
+{
+	return 'aaa';
+})->name('login');
