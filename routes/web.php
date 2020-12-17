@@ -11,11 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('pages.dashboard');
-});
+Route::get('/', "AuthController@getLogin")->name("login");
+Route::post('/logingin', "AuthController@postLogin")->name("post-login");
 
-Route::post('p/login', function ()
-{
-	return 'aaa';
-})->name('login');
+Route::middleware('auth')->group(function () {
+	Route::get('/dashoard', "UniversalController@dashboard")->name("dashboard");
+});
