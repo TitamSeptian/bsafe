@@ -6,5 +6,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class MaterialAttachment extends Model
 {
-    //
+    protected $table = "material_attachments";
+    protected $guarded = ["id"];
+
+    public function material()
+    {
+    	return $this->belongsTo(material::class);
+    }
+
+    public function attachment()
+    {
+    	return $this->belongsTo(attachment::class);
+    }
 }
