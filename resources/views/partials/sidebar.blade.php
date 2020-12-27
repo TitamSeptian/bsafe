@@ -23,12 +23,15 @@
                                 <span class="nav-link-text">Materi</span>
                             </a>
                         </li>
+                        @if(Auth::user()->roles == "operator" || Auth::user()->roles == "admin")
                         <li class="nav-item">
                             <a class="nav-link" href="">
                                 <i class="ni ni-single-02 text-primary"></i>
                                 <span class="nav-link-text">Sopir</span>
                             </a>
                         </li>
+                        @endif
+                        @if(Auth::user()->roles == "admin")
                         <li class="nav-item">
                             <a class="nav-link" href="">
                                 <i class="fas fa-users text-yellow"></i>
@@ -36,7 +39,7 @@
                                 <span class="nav-link-text">Petugas</span>
                             </a>
                         </li>
-                        
+                        @endif
                     </ul>
                     <!-- Divider -->
                     <hr class="my-3">

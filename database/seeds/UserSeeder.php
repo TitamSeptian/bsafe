@@ -15,14 +15,17 @@ class UserSeeder extends Seeder
         	[
         		"username" => "jhonsopir",
         		"password" => bcrypt("123qwe123"),
+                "roles" => "driver",
         	],
         	[
         		"username" => "jhonoperator",
         		"password" => bcrypt("123qwe123"),
+                "roles" => "operator",
         	],
         	[
         		"username" => "jhonadmin",
         		"password" => bcrypt("123qwe123"),
+                "roles" => "admin",
         	],
         ];
 		

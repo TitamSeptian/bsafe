@@ -16,4 +16,6 @@ Route::post('/logingin', "AuthController@postLogin")->name("post-login");
 
 Route::middleware('auth')->group(function () {
 	Route::get('/dashoard', "UniversalController@dashboard")->name("dashboard");
+
+	Route::post('/logout', "AuthController@logout")->name("logout");
 });
