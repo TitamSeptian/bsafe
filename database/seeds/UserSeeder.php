@@ -51,7 +51,7 @@ class UserSeeder extends Seeder
 
         \App\Operator::create([
         	"user_id" => 2,
-        	"name" => "Jhon Admin",
+        	"name" => "Jhon Operator",
         ]);
 
     }

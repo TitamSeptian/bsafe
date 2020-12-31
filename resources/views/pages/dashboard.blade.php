@@ -84,6 +84,7 @@
         </div>
         <div class="card-body">
             <h3>{{ Auth::user()->username }}</h3>
+            <h4>{{ Auth::user()->roles }}</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
             tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
             quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo

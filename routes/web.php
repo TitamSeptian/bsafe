@@ -18,4 +18,7 @@ Route::middleware('auth')->group(function () {
 	Route::get('/dashoard', "UniversalController@dashboard")->name("dashboard");
 
 	Route::post('/logout', "AuthController@logout")->name("logout");
+
+	Route::resource('/operator', "OperatorController");
+	Route::get('/d/opr', "OperatorController@datatables")->name('operator.data');
 });

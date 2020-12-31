@@ -18,8 +18,8 @@ class CreateMaterialAttachmentsTable extends Migration
             $table->unsignedBigInteger('material_id');
             $table->unsignedBigInteger('attachment_id');
             
-            $table->foreign('material_id')->on('materials')->references('id')->onUpdate('cascade');
-            $table->foreign('attachment_id')->on('attachments')->references('id')->onUpdate('cascade');
+            $table->foreign('material_id')->on('materials')->references('id')->onUpdate('cascade')->onDelete('cascade');;
+            $table->foreign('attachment_id')->on('attachments')->references('id')->onUpdate('cascade')->onDelete('cascade');;
             $table->timestamps();
         });
     }

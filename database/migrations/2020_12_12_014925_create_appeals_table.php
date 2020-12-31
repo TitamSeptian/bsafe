@@ -15,6 +15,8 @@ class CreateAppealsTable extends Migration
     {
         Schema::create('appeals', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('name');
+            $table->text('file');
             $table->timestamps();
         });
     }

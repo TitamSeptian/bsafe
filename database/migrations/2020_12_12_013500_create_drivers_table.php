@@ -23,7 +23,7 @@ class CreateDriversTable extends Migration
             $table->text('alamat');
             $table->enum('status', ["Lulus", "Tidak Lulus", "Calon"]);
             $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->on('users')->references('id')->onUpdate('cascade');
+            $table->foreign('user_id')->on('users')->references('id')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
     }

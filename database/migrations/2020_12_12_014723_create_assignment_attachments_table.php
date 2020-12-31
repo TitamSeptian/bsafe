@@ -18,8 +18,8 @@ class CreateAssignmentAttachmentsTable extends Migration
             $table->unsignedBigInteger('assignment_id');
             $table->unsignedBigInteger('attachment_id');
             
-            $table->foreign('assignment_id')->on('assignments')->references('id')->onUpdate('cascade');
-            $table->foreign('attachment_id')->on('attachments')->references('id')->onUpdate('cascade');
+            $table->foreign('assignment_id')->on('assignments')->references('id')->onUpdate('cascade')->onDelete('cascade');;
+            $table->foreign('attachment_id')->on('attachments')->references('id')->onUpdate('cascade')->onDelete('cascade');;
             $table->timestamps();
         });
     }

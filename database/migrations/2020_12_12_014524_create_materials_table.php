@@ -18,7 +18,7 @@ class CreateMaterialsTable extends Migration
             $table->string('name');
             $table->text('description');
             $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->on('users')->references('id')->onUpdate('cascade');
+            $table->foreign('user_id')->on('users')->references('id')->onUpdate('cascade')->onDelete('cascade');;
             $table->timestamps();
         });
     }

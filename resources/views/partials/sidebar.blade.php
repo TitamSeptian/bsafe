@@ -33,10 +33,10 @@
                         @endif
                         @if(Auth::user()->roles == "admin")
                         <li class="nav-item">
-                            <a class="nav-link" href="">
+                            <a class="nav-link {{ $activePage == 'operator' ? 'active' : '' }}" href="{{ route('operator.index') }}">
                                 <i class="fas fa-users text-yellow"></i>
                                 {{-- <i class="ni ni-single-02 text-yellow"></i> --}}
-                                <span class="nav-link-text">Petugas</span>
+                                <span class="nav-link-text">Operator</span>
                             </a>
                         </li>
                         @endif
