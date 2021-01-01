@@ -19,6 +19,12 @@ Route::middleware('auth')->group(function () {
 
 	Route::post('/logout', "AuthController@logout")->name("logout");
 
+	// operator
 	Route::resource('/operator', "OperatorController");
 	Route::get('/d/opr', "OperatorController@datatables")->name('operator.data');
+
+	// driver
+	Route::resource('/driver', "DriverController");
+	Route::get('/d/dvr', "DriverController@datatables")->name('driver.data');
+	
 });

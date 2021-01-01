@@ -25,7 +25,7 @@
                         </li>
                         @if(Auth::user()->roles == "operator" || Auth::user()->roles == "admin")
                         <li class="nav-item">
-                            <a class="nav-link" href="">
+                            <a class="nav-link {{ $activePage == 'driver' ? 'active' : '' }}" href="{{ route('driver.index') }}">
                                 <i class="ni ni-single-02 text-primary"></i>
                                 <span class="nav-link-text">Sopir</span>
                             </a>

@@ -68,7 +68,7 @@ class OperatorController extends Controller
             "name" => $request->name,
         ]);
 
-        return response()->json(["msg" => "Driver Berhasil Ditambahkan"], 200);
+        return response()->json(["msg" => "Operator Berhasil Ditambahkan"], 200);
     }
 
     /**
@@ -133,7 +133,7 @@ class OperatorController extends Controller
             'username' => $request->username
         ]);
 
-        return response()->json(["msg" => "Driver Berhasil Diubah"], 200);
+        return response()->json(["msg" => "Operator Berhasil Diubah"], 200);
 
     }
 
@@ -148,7 +148,7 @@ class OperatorController extends Controller
         $data = Operator::findOrFail($id);
         $data->user->delete();
         $data->delete();
-        return response()->json(["msg" => "Driver Berhasil Dihapus"], 200);
+        return response()->json(["msg" => "Operator Berhasil Dihapus"], 200);
     }
 
     public function datatables()
