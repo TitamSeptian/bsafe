@@ -1,7 +1,7 @@
 /node_modules
 /public/hot
 /public/storage
-/public/attachment
+/public/attachment/*
 /storage/*.key
 /vendor
 .env
