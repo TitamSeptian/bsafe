@@ -26,5 +26,18 @@ Route::middleware('auth')->group(function () {
 	// driver
 	Route::resource('/driver', "DriverController");
 	Route::get('/d/dvr', "DriverController@datatables")->name('driver.data');
+
+	// material
+	Route::resource('/material', "MaterialController");
+	Route::get('/material/delete/{id}', "MaterialController@destroy")->name('material.delete');
+	Route::get('/d/mtr', "MaterialController@datatables")->name('material.data');
+
+	// material-for-drivers
+	Route::prefix('0/driver')->group(function () {
+	    Route::get('/material', function () {
+	        return "success";
+	    })->name('driver.material.index');
+	});
+
 	
 });

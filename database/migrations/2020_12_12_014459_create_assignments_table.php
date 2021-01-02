@@ -17,6 +17,7 @@ class CreateAssignmentsTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->text('description');
+            $table->text('slug')->unique();
             $table->dateTime('due_date', 0);
             $table->timestamps();
         });

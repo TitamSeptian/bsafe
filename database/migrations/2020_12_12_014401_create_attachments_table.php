@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAttachmentsTable extends Migration
+class CreateAttachmentsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -16,7 +16,7 @@ class CreateAttachmentsTable extends Migration
         Schema::create('attachments', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->text('attachment');
-            $table->text('type', ['link', 'file', 'doc', 'sheet', 'slide', 'pdf']);
+            $table->enum('type', ['file', 'doc', 'sheet', 'slide', 'pdf']);
             $table->timestamps();
         });
     }
@@ -28,6 +28,6 @@ class CreateAttachmentsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('attachments');
+        Schema::dropIfExists('attachments');
     }
 }

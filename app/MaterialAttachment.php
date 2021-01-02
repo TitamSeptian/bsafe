@@ -11,11 +11,11 @@ class MaterialAttachment extends Model
 
     public function material()
     {
-    	return $this->belongsTo(material::class);
+    	return $this->belongsTo(Material::class);
     }
 
     public function attachment()
     {
-    	return $this->belongsTo(attachment::class);
+    	return $this->belongsTo(Attachment::class);
     }
 }

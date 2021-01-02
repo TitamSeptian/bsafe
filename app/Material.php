@@ -9,9 +9,9 @@ class Material extends Model
     protected $table = "materials";
     protected $guarded = ["id"];
 
-    public function driver_material()
+    public function driver_assginment()
     {
-    	return $this->hasMany(DriverMaterial::class);
+        return $this->hasMany(DriverAssignment::class);
     }
 
     public function material_attachment()

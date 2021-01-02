@@ -37,7 +37,7 @@ class UserSeeder extends Seeder
         	"user_id" => 1,
         	"name" => "Jhon Sopir",
         	"NIK" => "3120000000000000",
-        	"foto" => "sopir.jpg",
+        	"foto" => "sopir.png",
         	"gender" => "L",
         	"birth" => "2020-12-08",
         	"alamat" => "Bandung, 20, 121212, Jawabarat",
