@@ -135,4 +135,10 @@ class MaterialController extends Controller
         return redirect()->back()->with('msgSuccess', "Berhasil di hapus");
     }
 
+    public function driverMaterialIndex()
+    {
+        $data = Material::all();
+        return view('pages.material.driver.index', compact('data'));
+    }
+
 }

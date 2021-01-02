@@ -18,17 +18,17 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        @if(Auth::user()->roles == "operator" || Auth::user()->roles == "admin")
+                        {{-- @if(Auth::user()->roles == "operator" || Auth::user()->roles == "admin") --}}
                         <a class="nav-link {{ $activePage == 'material' ? 'active' : '' }}" href="{{ route('material.index') }}">
                             <i class="ni ni-planet text-orange"></i>
                             <span class="nav-link-text">Materi</span>
                         </a>
-                        @else
+                        {{-- @else
                         <a class="nav-link {{ $activePage == 'material-d' ? 'active' : '' }}" href="{{ route('driver.material.index') }}">
                             <i class="ni ni-planet text-orange"></i>
                             <span class="nav-link-text">Materi</span>
                         </a>
-                        @endif
+                        @endif --}}
                     </li>
                     @if(Auth::user()->roles == "operator" || Auth::user()->roles == "admin")
                     <li class="nav-item">

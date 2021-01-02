@@ -11,11 +11,11 @@
 |
 */
 
-Route::get('/', "AuthController@getLogin")->name("login");
-Route::post('/logingin', "AuthController@postLogin")->name("post-login");
+Route::get('/', "AuthController@getLogin")->name("login")->middleware('guest');
+Route::post('/logingin', "AuthController@postLogin")->name("post-login")->middleware('guest');
 
 Route::middleware('auth')->group(function () {
-	Route::get('/dashoard', "UniversalController@dashboard")->name("dashboard");
+	Route::get('/dashboard', "UniversalController@dashboard")->name("dashboard");
 
 	Route::post('/logout', "AuthController@logout")->name("logout");
 
@@ -38,9 +38,7 @@ Route::middleware('auth')->group(function () {
 
 	// material-for-drivers
 	Route::prefix('0/driver')->group(function () {
-	    Route::get('/material', function () {
-	        return "success";
-	    })->name('driver.material.index');
+	    Route::get('/material', "MaterialController@driverMaterialIndex")->name('driver.material.index');
 	});
 
 	

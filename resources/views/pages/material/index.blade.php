@@ -4,6 +4,7 @@
 @include('partials.alert')
 @endsection
 @section('m-content')
+@if(Auth::user()->roles == 'admin' || Auth::user()->roles == 'operator')
 <div class="card">
     <div class="card-header">
         <h4 class="float-left">Material</h4>
@@ -36,8 +37,22 @@
         </div>
     </div>
 </div>
+@else 
+<div class="row">
+    @foreach ($data as $val)
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="float-left">{{ $val->name }}</h4>
+            </div>
+            <div class="card-body">
+                <p>{{ substr($val->description, 0, 200)."..." }}</p>
+                <a href="{{ route('material.show', $val->id) }}" class="ml-2 btn btn-info btn-sm float-right mb-4"><i class="fas fa-eye"></i> Lihat</a>
+            </div>
+        </div>
+    </div>
+    @endforeach
+</div>
+@endif
 @endsection
-@push('js')
 
-<script src="js/driver.js"></script>
-@endpush
