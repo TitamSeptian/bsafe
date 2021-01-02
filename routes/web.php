@@ -30,7 +30,11 @@ Route::middleware('auth')->group(function () {
 	// material
 	Route::resource('/material', "MaterialController");
 	Route::get('/material/delete/{id}', "MaterialController@destroy")->name('material.delete');
-	Route::get('/d/mtr', "MaterialController@datatables")->name('material.data');
+	// Route::get('/d/mtr', "MaterialController@datatables")->name('material.data');
+	
+	// assignment
+	Route::resource('/assignment', "AssignmentController");
+	Route::get('/assignment/delete/{id}', "AssignmentController@destroy")->name('assignment.delete');
 
 	// material-for-drivers
 	Route::prefix('0/driver')->group(function () {

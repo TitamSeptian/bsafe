@@ -135,8 +135,4 @@ class MaterialController extends Controller
         return redirect()->back()->with('msgSuccess', "Berhasil di hapus");
     }
 
-    public function datatables()
-    {
-        
-    }
 }
