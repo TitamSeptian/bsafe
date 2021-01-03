@@ -10,7 +10,7 @@
         <div class="card-header">
             <h4 class="float-left">Tugas</h4>
             <a href="{{ route('driver.assignment.index') }}" class="float-right btn btn-sm btn-info ml-2"> Pengerjaan Tugas</a>
-            <a href="{{ route('material.create') }}" class="float-right btn btn-sm btn-primary"><i class="fas fa-plus"></i> Buat </a>
+            <a href="{{ route('assignment.create') }}" class="float-right btn btn-sm btn-primary"><i class="fas fa-plus"></i> Buat </a>
         </div>
         <div class="card-body">
             <div id="accordion" class="custom-accordion mb-4">
@@ -56,7 +56,13 @@
         <div class="col-md-4">
             <div class="card">
                 <div class="card-header">
-                    <h4 class="float-left">{{ $val->name }}</h4><sup>#<span>{{ $val->driver_assignment_attachment[0]->status }}</span></sup>
+                    <h4 class="float-left">{{ $val->name }}</h4>
+                    <sup>
+                        #
+                        <span>
+                            {{ count($val->driver_assignment_attachment) > 0 ? $val->driver_assignment_attachment[0]->status : "akses"  }}
+                        </span>
+                    </sup>
                 </div>
                 <div class="card-body">
                     <p>{{ substr($val->description, 0, 200)."..." }}</p>

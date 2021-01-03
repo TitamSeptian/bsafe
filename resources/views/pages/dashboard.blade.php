@@ -8,8 +8,8 @@
             <div class="card-body">
                 <div class="row">
                     <div class="col">
-                        <h5 class="card-title text-uppercase text-muted mb-0">Total traffic</h5>
-                        <span class="h2 font-weight-bold mb-0">350,897</span>
+                        <h5 class="card-title text-uppercase text-muted mb-0">Materi</h5>
+                        <span class="h2 font-weight-bold mb-0">{{ count(\App\Material::get()) }}</span>
                     </div>
                     <div class="col-auto">
                         <div class="icon icon-shape bg-gradient-red text-white rounded-circle shadow">
@@ -26,8 +26,8 @@
             <div class="card-body">
                 <div class="row">
                     <div class="col">
-                        <h5 class="card-title text-uppercase text-muted mb-0">New users</h5>
-                        <span class="h2 font-weight-bold mb-0">2,356</span>
+                        <h5 class="card-title text-uppercase text-muted mb-0">Tugas</h5>
+                        <span class="h2 font-weight-bold mb-0">{{ count(\App\Assignment::get()) }}</span>
                     </div>
                     <div class="col-auto">
                         <div class="icon icon-shape bg-gradient-orange text-white rounded-circle shadow">
@@ -44,8 +44,10 @@
             <div class="card-body">
                 <div class="row">
                     <div class="col">
-                        <h5 class="card-title text-uppercase text-muted mb-0">Sales</h5>
-                        <span class="h2 font-weight-bold mb-0">924</span>
+                        <h5 class="card-title text-uppercase text-muted mb-0">Rata Rata Nilai</h5>
+                        <span class="h2 font-weight-bold mb-0">
+                            {{ substr($nilai, 0, strlen($nilai)-5) }}
+                        </span>
                     </div>
                     <div class="col-auto">
                         <div class="icon icon-shape bg-gradient-green text-white rounded-circle shadow">
@@ -62,8 +64,8 @@
             <div class="card-body">
                 <div class="row">
                     <div class="col">
-                        <h5 class="card-title text-uppercase text-muted mb-0">Performance</h5>
-                        <span class="h2 font-weight-bold mb-0">49,65%</span>
+                        <h5 class="card-title text-uppercase text-muted mb-0">Rank</h5>
+                        <span class="h2 font-weight-bold mb-0">#1</span>
                     </div>
                     <div class="col-auto">
                         <div class="icon icon-shape bg-gradient-info text-white rounded-circle shadow">
@@ -79,18 +81,11 @@
 @section('m-content')
 <div class="row">
     <div class="card">
-        <div class="card-header">
-            Lorem Ipsum
-        </div>
         <div class="card-body">
-            <h3>{{ Auth::user()->username }}</h3>
-            <h4>{{ Auth::user()->roles }}</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <h1>Hallo {{ Auth::user()->username }} !</h2>
+            <p>
+                <b>bsafe</b> adalah Sebuah aplikasi edukasi berbasis web yang berisi informasi-informasi berkendara dengan baik yang ditargetkan untuk para pengemudi bus sopir yang baik adalah sopir yang memahami tentang karirnya. Tingkatkan pemahaman anda melalui bsafe
+            </p>
         </div>
     </div>
 </div>

@@ -24,7 +24,7 @@
                     <h1>bsafe</h1>
                 </a>
                 <p>
-                    sopir yang baik adalah sopir yang memahami tentang karirnya. Tingkatkan pemahaman anda melalui bsafe
+                    Sebuah aplikasi edukasi berbasis web yang berisi informasi-informasi berkendara dengan baik yang ditargetkan untuk para pengemudi bus sopir yang baik adalah sopir yang memahami tentang karirnya. Tingkatkan pemahaman anda melalui bsafe
                 </p>
             </div>
         </div>
