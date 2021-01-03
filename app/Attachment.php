@@ -14,7 +14,10 @@ class Attachment extends Model
         return $this->hasMany(AssignmentAttachment::class);
     }
 
-    
+    public function driver_assignment_attachment()
+    {
+        return $this->hasMany(DriverAssignmentAttachment::class);
+    }
 
     public function material_attachments()
     {

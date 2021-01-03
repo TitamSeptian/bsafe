@@ -36,10 +36,17 @@ Route::middleware('auth')->group(function () {
 	Route::resource('/assignment', "AssignmentController");
 	Route::get('/assignment/delete/{id}', "AssignmentController@destroy")->name('assignment.delete');
 
+	Route::post('/driver/{assignment_id}/attachment', "AssignmentController@driverAssignment")->name('assignment.driver');
+	Route::get('/0/driver/assignment', "AssignmentController@driverAssignmentIndex")->name("driver.assignment.index");
+	Route::get('d/dvr/asgnmnt', "AssignmentController@driverAssignmentDatatables")->name("driver.assignment.data");
+
+	Route::get('/0/nilai/driver/{id}/attachment', "AssignmentController@driverAssignmentNilai")->name('assignment.driver.show');
+	Route::post('/nilai/driver/{id}/attachment', "AssignmentController@driverAssignmentSetNilai")->name('assignment.driver.nilai');
+
 	// material-for-drivers
-	Route::prefix('0/driver')->group(function () {
-	    Route::get('/material', "MaterialController@driverMaterialIndex")->name('driver.material.index');
-	});
+	// Route::prefix('0/driver')->group(function () {
+	//     Route::get('/material', "MaterialController@driverMaterialIndex")->name('driver.material.index');
+	// });
 
 	
 });

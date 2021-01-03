@@ -14,8 +14,8 @@ class Assignment extends Model
     	return $this->hasMany(AssignmentAttachment::class);
     }
 
-    public function driver_assginment()
+    public function driver_assignment_attachment()
     {
-        return $this->hasMany(DriverAssignment::class);
+        return $this->hasMany(DriverAssignmentAttachment::class);
     }
 }

@@ -13,4 +13,9 @@ class Driver extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    public function driver_assignment_attachment()
+    {
+        return $this->hasMany(DriverAssignmentAttachment::class);
+    }
 }
